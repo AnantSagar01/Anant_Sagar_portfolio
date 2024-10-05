@@ -1,3 +1,8 @@
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+
 const btn = document.getElementById('button'); //send message button
 document.getElementById('form')
  .addEventListener('submit', function(event) {
@@ -19,3 +24,4 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+

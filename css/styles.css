@@ -1,3 +1,4 @@
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,15 +24,22 @@ header {
     z-index: 1000; /* Ensure it stays on top */
 }
 
+.navbar-container {
+    display: flex;
+    justify-content: center; /* Center the entire navbar container */
+    align-items: center;
+    position: relative; /* Necessary for absolute positioning of the dropdown */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the items in the navbar */
     flex-wrap: wrap; /* Allow items to wrap */
 }
 
 nav ul li {
-    margin: 0 1rem; /* Adjusted for responsiveness */
+    margin: 0 1rem; /* Space between navbar items */
 }
 
 nav ul li a {
@@ -53,6 +61,48 @@ nav ul li a.active {
     color: #ffffff; /* White text for active link */
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navbar links by default on mobile */
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        width: 100%;
+        background-color: #007BFF; /* Navbar background */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .nav-links.show {
+        display: flex; /* Show the navbar when hamburger is clicked */
+    }
+
+    .nav-links li {
+        margin: 1rem 0; /* Add margin between links */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+        align-items: right;
+        text-align: right;
+        margin-right: 25PX;
+    }
+
+    nav ul {
+        display: none; /* Hide the original navbar links */
+    }
+}
+
 /* Hero Section Styles */
 .hero {
     background-image: url('../images/your-graphic-background.jpg'); /* Add your graphic image */
@@ -62,7 +112,7 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #333333; /* dark text color for hero section */
+    color: #333333; /* Dark text color for hero section */
 }
 
 .hero-img {
@@ -82,25 +132,6 @@ nav ul li a.active {
     font-size: 2vw; /* Responsive font size */
     margin: 1rem 0;
 }
-
-.social-links {
-    display: flex; /* Aligns icons in a row */
-    justify-content: center; /* Centers the icons */
-    margin: 1rem 0; /* Space above and below the icons */
-}
-
-.social-link {
-    color: #007BFF; /* Bright Blue for icons */
-    font-size: 2rem; /* Size of the icons */
-    margin: 0 40px; /* Space between the icons */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.social-link:hover {
-    color: #0056b3; /* Darker Blue on hover */
-}
-
 
 .learn-more {
     display: inline-flex; /* Flex display for alignment */
@@ -130,6 +161,26 @@ nav ul li a.active {
     transform: translateY(2px); /* Slight downward movement */
 }
 
+/* Social Links Section */
+.social-links {
+    display: flex; /* Aligns icons in a row */
+    justify-content: center; /* Centers the icons */
+    margin: 1rem 0; /* Space above and below the icons */
+}
+
+.social-link {
+    color: #007BFF; /* Bright Blue for icons */
+    font-size: 1.5rem; /* Size of the icons */
+    margin: 0 15px; /* Space between the icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.social-link:hover {
+    color: #0056b3; /* Darker Blue on hover */
+}
+
+/* About, Skills, Projects, Contact Sections */
 .about, .skills, .projects, .contact {
     padding: 2rem;
     background-color: #ffffff; /* White background for sections */
@@ -137,7 +188,6 @@ nav ul li a.active {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
 
 .container {
     max-width: 1200px;
@@ -196,7 +246,7 @@ nav ul li a.active {
     max-width: 300px; /* Limit max width for larger screens */
     margin: 1rem; /* Add some margin around each card */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center; /* Center align text within the project */
+    text-align: center; /* Center the content */
 }
 
 .project-img {
@@ -208,6 +258,7 @@ nav ul li a.active {
     object-fit: cover; /* Cover the entire container without stretching */
 }
 
+/* Button Style for View Project Links */
 .view-project-btn {
     display: inline-block; /* Allows padding and margins */
     background-color: #007BFF; /* Bright Blue background */
@@ -223,12 +274,11 @@ nav ul li a.active {
     margin-top: 10px; /* Add some space above the button */
 }
 
-/* Hover Effect */
+/* Hover Effect for View Project Buttons */
 .view-project-btn:hover {
     background-color: #0056b3; /* Darker Blue on hover */
     transform: translateY(-2px); /* Slight upward movement */
 }
-
 
 .contact {
     background-color: #ffffff; /* White background for contact */
@@ -295,7 +345,14 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
+
+/* Styles for mobile screens (max-width: 768px) */
 @media (max-width: 768px) {
+    /* Adjust hero image size */
+    .hero-img {
+        width: 40vw; /* Larger width on smaller screens */
+    }
+
     .hero h1 {
         font-size: 6vw; /* Responsive font size */
     }
@@ -304,21 +361,31 @@ footer {
         font-size: 4vw; /* Responsive font size */
     }
 
+    /* Adjust button sizes */
     .learn-more {
         font-size: 1rem; /* Responsive font size */
         padding: 8px 16px; /* Adjust padding */
     }
 
-    .project {
-        width: 90%; /* Take more width on smaller screens */
-    }
-
+    /* Stack profile image and description vertically */
     .profile {
-        flex-direction: column; /* Stack profile image and text */
-        align-items: center; /* Center align */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .profile-img {
-        margin: 0 0 1rem 0; /* Adjust margin */
+        margin-bottom: 1rem;
+    }
+
+    /* Make the project cards take full width */
+    .project {
+        width: 90%;
+    }
+
+    /* Reduce social link icon size */
+    .social-link {
+        font-size: 1.2rem;
+        margin: 0 10px;
     }
 }
