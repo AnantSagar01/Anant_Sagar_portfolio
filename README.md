@@ -1,6 +1,7 @@
 # Anant Sagar's Portfolio
 
 Welcome to my portfolio! This website showcases my skills, projects, and experiences as an aspiring Electrical Engineer and Developer.
+**Link**: https://anantsagar0069.github.io/Anant_Sagar_portfolio/
 
 ## Table of Contents
 
@@ -35,11 +36,9 @@ Here are a few projects I've worked on:
 
 1. **[BMI Calculator App](https://github.com/AnantSagar0069/BMI-calculator-App)**
    - A simple app that calculates BMI using weight and height. Built with Java and XML.
-   - ![BMI Calculator](images/bmi-calculator.gif)
 
 2. **[TicTacToe Game](https://github.com/AnantSagar0069/TicTacToe-Game-App)**
    - A two-player game with real-time win detection. Built with Java and XML.
-   - ![TicTacToe Game](images/tictactoe-game.gif)
 
 ## Contact Me
 
