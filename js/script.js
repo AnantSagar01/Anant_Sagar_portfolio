@@ -1,4 +1,4 @@
-const btn = document.getElementById('button');
+const btn = document.getElementById('button'); //send message button
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
