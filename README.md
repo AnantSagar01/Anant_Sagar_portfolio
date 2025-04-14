@@ -47,7 +47,7 @@ Here are a few projects I've worked on:
 Feel free to reach out to me via email or connect with me on LinkedIn and GitHub:
 
 - **Email**: [anantsagar0000@gmail.com](mailto:anantsagar0000@gmail.com)
-- **GitHub**: [AnantSagar0069](https://github.com/AnantSagar0069)
+- **GitHub**: [AnantSagar01](https://github.com/AnantSagar01)
 - **LinkedIn**: [Anant Sagar](https://www.linkedin.com/in/anant-sagar-9a4044225/)
 
 ## Technologies Used
